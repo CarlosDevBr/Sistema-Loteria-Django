@@ -1,9 +1,7 @@
 from django.shortcuts import render
 from random import randint
-from django.http import HttpResponse
 
 def home(request):
-    # contexto = {'dados': num }
     games = []
     while len(games) < 11:
         list = []
@@ -18,12 +16,6 @@ def home(request):
         if list not in games:
             games.append(list)
 
-    html = f'<body> ' \
-                f'<p>Simulador de Loteria</p>' \
-                    '{% for i in loteria %}' \
-                        'jogo = {{i}}' \
-                    '{% endfor%}'\
-           f'<p></p>' \
-           f'Jogo = {games}</body>'
+    contexto = {'lottery': games }
 
-    return HttpResponse(html)
+    return render(request, 'index.html', contexto)

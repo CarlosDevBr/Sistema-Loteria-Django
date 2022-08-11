@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador</title>
+</head>
+<body>
+    <p>Simulador de Loteria</p>
+    <p>----------------------</p>
+        {% for i in lottery %}
+                jogo = {% for j in i %}
+
+                        {{ j }} &nbsp;
+
+                {% endfor %} <br>
+        {% endfor %}
+</body>
+</html>
