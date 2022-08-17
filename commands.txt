@@ -1,0 +1,16 @@
+pip freeze 
+pip freeze > requirements.txt
+python manage.py runserver {:porta que vai rodar:}
+python manage.py startapp core
+
+endereço                   - porta          - recurso
+https://127.0.0.1           :8080             /
+
+
+
+
+
+
+
+GIT >> BONÛS
+git pull origin master --allow-unrelated-histories
