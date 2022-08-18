@@ -2,8 +2,11 @@ from django.shortcuts import render
 from random import randint
 
 def home(request):
+    n = 0
+    if request.POST:
+        n = int(request.POST['valor'])
     games = []
-    while len(games) < 11:
+    while len(games) < n:
         list = []
 
         while len(list) < 6:

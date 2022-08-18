@@ -6,10 +6,15 @@
 </head>
 <body>
     <img src="media_files/logo.jpg" width="200">
-    <p>Simulador de Loteria</p>
+    <strong><p>Simulador de Loteria</p></strong>
+    <form method="post">
+        {% csrf_token %} <!-- cross site request forgery-->
+        <input type=”text” name="valor">
+        <button type="submit">Gerar</button>
+    </form>
     <p>----------------------</p>
         {% for i in lottery %}
-                jogo = {% for j in i %}
+           <font color="blue"> jogo {{ forloop.counter }} </font> = {% for j in i %}
 
                         {{ j }} &nbsp;
 
