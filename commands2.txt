@@ -1,0 +1,5 @@
+venv\scripts\activate
+python manage.py runserver
+
+internet(WAN) ataque de csrf analogia 'transportar uma caixa transparente cheia de notas de dinheiro na 15 de março'
+formulario no django 1º '{% csrf_token %}'
